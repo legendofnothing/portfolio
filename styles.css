@@ -1,0 +1,43 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    padding: 2% 18%;
+}
+
+.name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 30px
+}
+
+.title-section {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.wrapper {
+    overflow: hidden;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleRight {
+    display: flex;
+    text-align: right;
+    gap: 15px;
+}
+
+.header-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
+.header-btn:hover {
+    opacity: 1;
+}

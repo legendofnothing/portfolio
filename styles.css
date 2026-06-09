@@ -1,6 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
-    padding: 2% 18%;
+    padding: 2% 20%;
 }
 
 .name {
@@ -24,6 +24,16 @@ body {
     align-items: center;
 }
 
+.wrapper2 {
+    overflow: hidden;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+    align-items: center;
+}
+
 .titleRight {
     display: flex;
     text-align: right;
@@ -40,4 +50,55 @@ body {
 
 .header-btn:hover {
     opacity: 1;
+}
+
+.about-me {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.sub {
+    font-family: inherit;
+    color: rgb(0 0 0 / 0.5);
+    font-size: 17px;
+}
+
+.content {
+    font-family: inherit;
+    color: rgb(0 0 0 / 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+
+.mainbody {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project_button {
+    width: 420px;
+    aspect-ratio: 16 / 9;
+}
+
+.project_button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
 }

@@ -1,12 +1,16 @@
 const container = document.getElementById('canvas-container');
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(5
-    , window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+    5,
+    container.clientWidth / container.clientHeight,
+    0.1,
+    1000
+);
 camera.position.z = 5;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -47,9 +51,13 @@ function animate() {
 }
 
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    renderer.setSize(width, height);
 });
 
 animate();

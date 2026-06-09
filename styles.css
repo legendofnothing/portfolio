@@ -11,6 +11,10 @@ html, body {
     height: 100vh;
 }
 
+canvas {
+    display: block;
+}
+
 .ui-overlay {
     position: absolute;
     bottom: 100px;

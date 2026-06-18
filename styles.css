@@ -1,5 +1,8 @@
 body {
     font-family: "Open Sans", sans-serif;
+}
+
+.main {
     padding: 2% 20%;
 }
 
@@ -181,4 +184,12 @@ h1 {
     font-size: 14px;
     color: #666;
     line-height: 1.4;
+}
+
+.footer {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
 }

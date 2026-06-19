@@ -1,46 +1,56 @@
-body {
-    font-family: "Open Sans", sans-serif;
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
 .main {
     padding: 2% 20%;
 }
 
 .name {
     font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 30px
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
 }
 
-.title-section {
-    display: flex;
-    gap: 20px;
-    white-space: nowrap;
+sub {
+    font-size: 15px;
+    color: #666;
+    font-weight: 400;
 }
 
 .wrapper {
     overflow: hidden;
-    margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 auto 50px;
 }
 
 .wrapper2 {
     overflow: hidden;
     margin: 0 auto;
-
     display: flex;
     justify-content: center;
     gap: 5%;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .titleRight {
     display: flex;
     text-align: right;
-    gap: 15px;
+    gap: 20px;
+    white-space: nowrap;
 }
 
 .header-btn {
@@ -49,6 +59,12 @@ body {
     font-family: inherit;
     opacity: 0.5;
     letter-spacing: 1px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    transition: opacity 0.2s;
 }
 
 .header-btn:hover {
@@ -58,35 +74,44 @@ body {
 .about-me {
     margin-left: 5%;
     margin-right: 5%;
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
-.sub {
+.about-me h1 {
     font-family: inherit;
-    color: rgb(0 0 0 / 0.5);
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 24px;
 }
 
 .content {
     font-family: inherit;
-    color: rgb(0 0 0 / 0.7);
-    font-size: 14px;
-    line-height: 1.5;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
-.project-text {
-    font-family: inherit;
-    color: rgb(0 0 0 / 0.7);
-    font-size: 14px;
-    line-height: 1.5;
-    padding-bottom: 20px;
+.content:last-child {
+    margin-bottom: 0;
 }
 
+.introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
 h1 {
     font-family: inherit;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
+    font-weight: 700;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 24px;
 }
 
 .mainbody {
@@ -96,12 +121,6 @@ h1 {
     gap: 20px;
 }
 
-.introduction {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .project_body {
     display: flex;
     flex-direction: column;
@@ -109,17 +128,10 @@ h1 {
     padding-bottom: 20px;
 }
 
-.project_button {
-    width: 520px;
-    aspect-ratio: 16 / 9;
-}
-
-.project_button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.3s ease;
+.project_body .content {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .project_container {
@@ -129,10 +141,11 @@ h1 {
 
 .project_button {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 460 / 215;
     position: relative;
     display: flex;
     align-items: flex-end;
+    overflow: hidden;
 }
 
 .project_button img {
@@ -142,12 +155,17 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease;
+}
+
+.project_button:hover img {
+    transform: scale(1.08);
 }
 
 .project_ribbon {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.55);
-    padding: 8px 12px;
+    padding: 10px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,8 +191,8 @@ h1 {
 }
 
 .project_name {
-    margin: 0 0 6px 0;
-    font-size: 18px;
+    margin: 0 0 8px 0;
+    font-size: 20px;
     font-weight: 600;
     color: #222;
 }
@@ -183,13 +201,41 @@ h1 {
     margin: 0;
     font-size: 14px;
     color: #666;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+#contacts {
+    margin-left: 5%;
+    margin-right: 5%;
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+#contacts h1 {
+    margin-bottom: 20px;
+}
+
+#contacts a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#contacts a:hover {
+    text-decoration: underline;
 }
 
 .footer {
     background: #1a1a1a;
-    color: #e0e0e0;
-    padding: 10px;
+    color: #999;
+    padding: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+    margin-top: 40px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
